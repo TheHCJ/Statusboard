@@ -27,3 +27,41 @@
   font-weight: 500;
   font-style: normal;
 }
+
+/* Theming */
+
+/* 
+:root {
+  --bg: white;
+  --text: black;
+}
+*/
+:root {
+  --bg: #121212;
+  --text: #f0f0f0;
+}
+
+/* Globals */
+
+html body {
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+/* Dark/Light Toggle */
+.checkbox-image img.dark {
+  display: none;
+}
+
+.checkbox-image input:checked ~ img.light {
+  display: none;
+}
+
+.checkbox-image input:checked ~ img.dark {
+  display: inline;
+}
+
+/* List */
