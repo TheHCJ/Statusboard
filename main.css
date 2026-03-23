@@ -33,6 +33,7 @@
 :root {
   --bg: white;
   --text: black;
+  --link: #008b8b;
 }
 /* Globals */
 
@@ -46,6 +47,10 @@ html body {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+a {
+  color: var(--link);
 }
 
 /* Dark/Light Toggle */
