@@ -30,17 +30,10 @@
 
 /* Theming */
 
-/* 
 :root {
   --bg: white;
   --text: black;
 }
-*/
-:root {
-  --bg: #121212;
-  --text: #f0f0f0;
-}
-
 /* Globals */
 
 html body {
@@ -52,6 +45,10 @@ html body {
 }
 
 /* Dark/Light Toggle */
+.checkbox-image input {
+  display: none;
+}
+
 .checkbox-image img.dark {
   display: none;
 }
@@ -65,3 +62,9 @@ html body {
 }
 
 /* List */
+
+/* Topbar */
+.topbar {
+  display: flex;
+  flex-direction: row;
+}
