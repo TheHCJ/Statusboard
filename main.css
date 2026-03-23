@@ -87,3 +87,13 @@ html body {
   right: 2rem;
   justify-content: right;
 }
+
+/* Footer */
+.footer {
+  display: flex;
+
+  margin-top: 60dvh;
+
+  text-align: center;
+  justify-content: center;
+}
