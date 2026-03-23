@@ -1,30 +1,30 @@
 /* Google Fonts */
 
-.alan-sans-light {
+.alan-sans-lite {
   font-family: "Alan Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 250;
   font-style: normal;
 }
 
 .alan-sans-regular {
   font-family: "Alan Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 350;
   font-style: normal;
 }
 
 .alan-sans-title {
   font-family: "Alan Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 750;
   font-style: normal;
 }
 
 .alan-sans-bold {
   font-family: "Alan Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 450;
   font-style: normal;
 }
 
@@ -32,12 +32,22 @@
 
 :root {
   --bg: white;
+  --fg: gainsboro;
   --text: black;
   --link: #008b8b;
+
+  /* Stays same */
+  --accent: #ffd700;
 }
 /* Globals */
 
 html body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+
   background: var(--bg);
   color: var(--text);
   transition:
@@ -47,6 +57,10 @@ html body {
   text-align: center;
   align-items: center;
   justify-content: center;
+}
+
+.main {
+  flex: 1;
 }
 
 a {
@@ -68,6 +82,40 @@ a {
 
 .checkbox-image input:checked ~ img.dark {
   display: inline;
+}
+
+/* Composter */
+.composer {
+  display: inline;
+
+  justify-content: center;
+  width: 30dvw;
+}
+.composer textarea {
+  width: 30dvw;
+  padding: 0.6rem;
+
+  background: var(--fg);
+  border: 1px solid #333;
+  border-radius: 0.3rem;
+
+  color: var(--text);
+  font-size: 0.9rem;
+
+  transition: all 0.2s ease;
+}
+
+.composer textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 6px #ffd70055;
+}
+
+.composer button {
+  margin: 0.6rem;
+
+  width: calc(30dvw + 0.6rem);
+  height: 2rem;
 }
 
 /* List */
@@ -95,10 +143,11 @@ a {
 
 /* Footer */
 .footer {
-  display: flex;
+  min-height: 2rem;
 
-  margin-top: 60dvh;
+  margin-top: auto;
 
+  align-items: center;
   text-align: center;
   justify-content: center;
 }
